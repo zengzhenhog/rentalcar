@@ -43,4 +43,4 @@ func (*Service) GetTrip(c context.Context, req *trippb.GetTripRequest) (*trippb.
 	}, nil
 }
 
-func (*Service) mustEmbedUnimplementedTripServiceServer() {}
+// func (*Service) mustEmbedUnimplementedTripServiceServer() {}

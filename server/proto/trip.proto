@@ -20,7 +20,7 @@ message Trip {
   Location start_pos = 5;
   repeated Location path_locations = 7; // 字段以s结尾 repeated-slice
   string end = 2;
-  int32 duration_sec = 3;
+  int32 duration_sec = 3; // 如果使用int64可能返回给前端的会变成字符串，int64太大为了保险转成字符串
   int32 fee_cent = 4;
   Location end_pos = 6;
   TripStatus status = 8;
