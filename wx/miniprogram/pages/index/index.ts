@@ -45,5 +45,27 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  login() {
+    wx.login({
+      success: res => {
+        wx.request({
+          url: "http://localhost:8080/v1/auth/login",
+          method: "POST",
+          data: { code: res.code },
+          success: res => {
+            console.log(res)
+            wx.request({
+              url: "http://localhost:8080/v1/trip",
+              method: "POST",
+              data: { start: "abc" },
+              header: {
+                authorization: 'Bearer ' + res.data.access_token
+              }
+            })
+          }
+        })
+      }
+    })
   }
 })
