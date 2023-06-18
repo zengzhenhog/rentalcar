@@ -1,5 +1,3 @@
-# 租车项目源码
-
 ## 项目介绍
 共享出行-汽车分时租赁小程序。使用typescript进行小程序前端开
 发。后端采用go微服务架构，使用k8s+docker在云端进行部署。
@@ -12,7 +10,6 @@
 
 
 ## 产品体验
-
 
 ![](https://coolcar-1256512285.cos.ap-shanghai.myqcloud.com/next_available.jpeg)
 
